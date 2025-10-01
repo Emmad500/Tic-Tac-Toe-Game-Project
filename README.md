@@ -21,7 +21,7 @@ Play with a friend or challenge the computer — the AI makes **smart moves** to
 ---
 
 ## 🚀 Live Demo
-👉 [Play the game here]()
+👉 [Play the game here](https://emmad500.github.io/Tic-Tac-Toe-Game-Project/)
 
 ---
 
