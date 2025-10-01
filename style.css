@@ -1,0 +1,195 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Utility Classes */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Project Classes */
+body {
+    /* font-family: Arial, sans-serif; */
+    background: linear-gradient(135deg, #f0f9ff, #c9fdd7); /* fresh gradient */
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+}
+
+nav{
+    background: linear-gradient(90deg, #2e8b57, #3cb371);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: "Roboto", sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container{
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: "Roboto", sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid #2e8b57;
+    font-size: 7vw;
+    transition: background 0.3s ease, transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: #d0f5d3;
+    transform: scale(1.05); /* nice hover pop */
+}
+
+.info{
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e8b57;
+}
+
+.gameInfo{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 30px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    max-width: 100%;
+    margin-right: 56px;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 10px;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: linear-gradient(45deg, #2e8b57, #85e985);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+
+#reset:hover {
+    transform: scale(1.1);
+}
+
+.line{
+    background-color: #ff4500; /* bright orange for visibility */
+    height: 5px; /* thicker line */
+    border-radius: 5px;
+    width: 0;
+    position: absolute;
+    
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .gameInfo {
+        margin-top: 35px;
+        width: 63vw;
+        margin-left: 0%;
+    }
+
+    .gameInfo h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .gameInfo div{
+        text-align: center;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .imgbox img {
+        margin-right: 56px;
+    }
+    .line {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gameInfo {
+        margin-top: 20px;
+        width: 70vw;
+        margin-left: 0%;
+    }
+    .gameInfo h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .imgbox img {
+        margin-right: 56px;
+    }
+}
